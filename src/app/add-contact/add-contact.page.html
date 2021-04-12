@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add a new contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #myForm="ngForm" (ngSubmit)="onSubmit( myForm.value )">
+    <ion-item>
+      <ion-label>Firstname</ion-label>
+      <ion-input type="text" name="firstname" [(ngModel)]="firstname" required="true" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lastname</ion-label>
+      <ion-input type="text" name="lastname" [(ngModel)]="lastname" required="true" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email" name="email" [(ngModel)]="email" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Company</ion-label>
+      <ion-input type="text" name="company" [(ngModel)]="company" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone</ion-label>
+      <ion-input type="text" name="phone" [(ngModel)]="phone" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Message</ion-label>
+      <ion-textarea rows="4" name="message" [(ngModel)]="message" ></ion-textarea>
+    </ion-item>
+    <ion-button type="submit" expand="block">Add Contact</ion-button>
+  </form>
+</ion-content>

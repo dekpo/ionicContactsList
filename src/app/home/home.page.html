@@ -3,6 +3,9 @@
     <ion-title>
       Contacts
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/add-contact']" color="primary">Add</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,7 +16,15 @@
       <h2>{{contact.firstname}} {{contact.lastname}}</h2>
       <h3>{{contact.email}}</h3>
       <p>{{contact.company}}</p>
+      <ion-button color="danger" (click)="delete( contact._id )">Delete</ion-button>
     </ion-label>
   </ion-item>
 </ion-list>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+<ion-fab-button [routerLink]="['/add-contact']">
+  <ion-icon name="add"></ion-icon>
+</ion-fab-button>
+</ion-fab>
+
 </ion-content>
