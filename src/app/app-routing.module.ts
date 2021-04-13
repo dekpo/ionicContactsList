@@ -23,6 +23,14 @@ const routes: Routes = [
     path: 'entreprises',
     loadChildren: () => import('./entreprises/entreprises.module').then( m => m.EntreprisesPageModule)
   },
+  {
+    path: 'add-entreprise',
+    loadChildren: () => import('./add-entreprise/add-entreprise.module').then( m => m.AddEntreprisePageModule)
+  },
+  {
+    path: 'update-entreprise/:id',
+    loadChildren: () => import('./add-entreprise/add-entreprise.module').then( m => m.AddEntreprisePageModule)
+  },
 ];
 
 @NgModule({

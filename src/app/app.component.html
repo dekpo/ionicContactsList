@@ -9,8 +9,22 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-item [routerLink]="['/home']" >Contacts</ion-item>
-          <ion-item [routerLink]="['/entreprises']">Entreprises</ion-item>
+          <ion-menu-toggle>
+          <ion-item [routerLink]="['/home']" routerLinkActive="selected">
+            <ion-icon name="people" slot="start"></ion-icon>
+            <ion-label>
+              Contacts
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/entreprises']" routerLinkActive="selected">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>
+            Entreprises
+          </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
         </ion-list>
       </ion-content>
 

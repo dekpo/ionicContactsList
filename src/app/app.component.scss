@@ -1,0 +1,6 @@
+ion-item.selected {
+    --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  }
+ion-item.selected ion-icon {
+    color: var(--ion-color-primary);
+}

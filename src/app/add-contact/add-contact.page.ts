@@ -66,6 +66,7 @@ export class AddContactPage implements OnInit {
     this.http.get(this.API_URL+'/entreprises').subscribe( (data) => {
       console.log('Data Entreprises', data );
       this.companies = data;
+      this.companies.reverse();
     });
 
     // récup des champs d'un contact pour update
