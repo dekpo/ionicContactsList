@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar [color]="id ? 'secondary' : 'primary'">
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Add a new contact</ion-title>
+    <ion-title>{{txtHeader}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -23,7 +23,10 @@
     </ion-item>
     <ion-item>
       <ion-label>Company</ion-label>
-      <ion-input type="text" name="company" [(ngModel)]="company" ></ion-input>
+      <ion-select name="company_id" [(ngModel)]="company_id">
+        <ion-select-option *ngFor="let company of companies" [value]="company._id">{{company.name}}</ion-select-option>
+      </ion-select>
+      <!-- <ion-input type="text" name="company" [(ngModel)]="company" ></ion-input> -->
     </ion-item>
     <ion-item>
       <ion-label>Phone</ion-label>
@@ -33,6 +36,6 @@
       <ion-label>Message</ion-label>
       <ion-textarea rows="4" name="message" [(ngModel)]="message" ></ion-textarea>
     </ion-item>
-    <ion-button type="submit" expand="block">Add Contact</ion-button>
+    <ion-button [color]="id ? 'secondary' : 'primary'" type="submit" expand="block">{{txtButton}}</ion-button>
   </form>
 </ion-content>
