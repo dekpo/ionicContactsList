@@ -60,6 +60,15 @@ export class AddContactPage implements OnInit {
 
   }
 
+  getCompanyName(event){
+    const id = event.target.value;
+    console.log('Company_id Selected: ',id);
+    this.http.get(this.API_URL+'/entreprises/'+id).subscribe( (data) => {
+      console.log('Data Entreprise', data );
+      this.company = data[0]['name'];
+    });
+  }
+
   ngOnInit() {
 
     // récup des entreprises dispos dans la bdd

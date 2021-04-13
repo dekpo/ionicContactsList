@@ -10,23 +10,23 @@
 <ion-content>
   <form #myForm="ngForm" (ngSubmit)="onSubmit( myForm.value )">
     <ion-item>
-      <ion-label>Name</ion-label>
+      <ion-label position="fixed">Name</ion-label>
       <ion-input type="text" name="name" [(ngModel)]="name" required="true" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Type</ion-label>
+      <ion-label position="fixed">Type</ion-label>
       <ion-input type="text" name="type" [(ngModel)]="type" required="true" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Address</ion-label>
+      <ion-label position="fixed">Address</ion-label>
       <ion-input type="text" name="address" [(ngModel)]="address" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Url</ion-label>
-      <ion-input type="text" name="url" [(ngModel)]="url" ></ion-input>
+      <ion-label position="fixed">Url</ion-label>
+      <ion-input type="text" name="site_url" [(ngModel)]="site_url" ></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Description</ion-label>
+      <ion-label position="fixed">Description</ion-label>
       <ion-textarea rows="4" name="description" [(ngModel)]="description" ></ion-textarea>
     </ion-item>
     <ion-button [color]="id ? 'secondary' : 'primary'" type="submit" expand="block">{{txtButton}}</ion-button>

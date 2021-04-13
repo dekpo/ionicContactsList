@@ -23,7 +23,7 @@ export class AddEntreprisePage implements OnInit {
   name = '';
   type = '';
   address = '';
-  url = '';
+  site_url = '';
   description = '';
 
   onSubmit(formData){
@@ -70,7 +70,7 @@ export class AddEntreprisePage implements OnInit {
         this.name = data[0]['name'];
         this.type = data[0]['type'];
         this.address = data[0]['address'];
-        this.url = data[0]['url'];
+        this.site_url = data[0]['site_url'];
         this.description = data[0]['description'];
       })
     }
